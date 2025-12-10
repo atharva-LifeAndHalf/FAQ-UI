@@ -16,7 +16,7 @@
             </button>
 
             <div class="logo-section">
-                <img src="{{ url_for('static', filename='static/l&h_logo.png') }}" class="logo-img" alt="L&H Logo">
+                <img src="{{ url_for('static', filename='l&h_logo.png') }}" class="logo-img" alt="L&H Logo">
                 <div class="logo-text">FAQ Assistant</div>
             </div>
 
@@ -34,7 +34,7 @@
             <div class="chat-messages" id="chatMessages">
                 <!-- Empty State -->
                 <div class="empty-state" id="emptyState">
-                    <img src="{{ url_for('static', filename='static/l&h_logo.png') }}" class="empty-logo-img" alt="L&H Logo">
+                    <img src="{{ url_for('static', filename='l&h_logo.png') }}" class="empty-logo-img" alt="L&H Logo">
                     <h1 class="empty-title">How can I help you today?</h1>
                     <p class="empty-subtitle">Ask me anything about Life & Half services, policies, or general inquiries</p>
                     
@@ -61,7 +61,7 @@
                 <!-- Typing Indicator -->
                 <div class="typing-indicator" id="typingIndicator">
                     <div class="message-avatar bot-avatar">
-                        <img src="{{ url_for('static', filename='static/l&h_logo.png') }}" alt="Bot" class="avatar-img">
+                        <img src="{{ url_for('static', filename='l&h_logo.png') }}" alt="Bot" class="avatar-img">
                     </div>
                     <div class="typing-dots">
                         <span></span>
@@ -144,7 +144,7 @@
             } else {
                 messageDiv.innerHTML = `
                     <div class="message-avatar bot-avatar">
-                        <img src="{{ url_for('static', filename='static/l&h_logo.png') }}" alt="Bot" class="avatar-img">
+                        <img src="{{ url_for('static', filename='l&h_logo.png') }}" alt="Bot" class="avatar-img">
                     </div>
                     <div class="message-content">
                         <div class="message-text">${text}</div>
@@ -215,4 +215,5 @@
     </script>
 </body>
 </html>
+
 
