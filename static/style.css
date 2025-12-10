@@ -6,8 +6,8 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
-    background: #212121;
-    color: #ececec;
+    background: #212121 !important;
+    color: #ececec !important;
     height: 100vh;
     overflow: hidden;
 }
@@ -15,9 +15,9 @@ body {
 .app-container {
     display: flex;
     height: 100vh;
+    background: #212121;
 }
 
-/* Sidebar */
 .sidebar {
     width: 260px;
     background: #171717;
@@ -40,6 +40,7 @@ body {
     font-size: 14px;
     transition: all 0.2s;
     margin-bottom: 12px;
+    font-family: inherit;
 }
 
 .new-chat-btn:hover {
@@ -79,7 +80,6 @@ body {
     text-align: center;
 }
 
-/* Main Chat Area */
 .main-content {
     flex: 1;
     display: flex;
@@ -91,9 +91,6 @@ body {
     padding: 16px 24px;
     border-bottom: 1px solid #2f2f2f;
     background: #171717;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .chat-title {
@@ -106,7 +103,7 @@ body {
     flex: 1;
     overflow-y: auto;
     padding: 24px;
-    scroll-behavior: smooth;
+    background: #212121;
 }
 
 .chat-messages::-webkit-scrollbar {
@@ -178,16 +175,6 @@ body {
     line-height: 1.6;
     color: #ececec;
     font-size: 15px;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-}
-
-.message.user .message-text {
-    color: #d1d1d1;
-}
-
-.message.bot .message-text {
-    color: #ececec;
 }
 
 .typing-indicator {
@@ -233,7 +220,6 @@ body {
     }
 }
 
-/* Input Area */
 .input-container {
     padding: 20px 24px;
     border-top: 1px solid #2f2f2f;
@@ -255,11 +241,9 @@ body {
     color: #ececec;
     font-size: 15px;
     outline: none;
-    transition: all 0.2s;
     resize: none;
     max-height: 200px;
     font-family: inherit;
-    line-height: 1.5;
 }
 
 .chat-input:focus {
@@ -306,7 +290,6 @@ body {
     margin-top: 12px;
 }
 
-/* Empty State */
 .empty-state {
     display: flex;
     flex-direction: column;
@@ -337,12 +320,11 @@ body {
     color: #8e8e8e;
     text-align: center;
     max-width: 500px;
-    line-height: 1.5;
 }
 
 .suggestion-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
     max-width: 700px;
     width: 100%;
@@ -373,32 +355,13 @@ body {
 .suggestion-text {
     font-size: 14px;
     color: #ececec;
-    line-height: 1.4;
 }
 
-/* Mobile Responsive */
 @media (max-width: 768px) {
     .sidebar {
         display: none;
     }
-
-    .chat-messages {
-        padding: 16px;
-    }
-
-    .input-container {
-        padding: 16px;
-    }
-
     .suggestion-cards {
         grid-template-columns: 1fr;
-    }
-
-    .empty-title {
-        font-size: 22px;
-    }
-
-    .empty-subtitle {
-        font-size: 14px;
     }
 }
