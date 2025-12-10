@@ -1,0 +1,8 @@
+flask
+gunicorn
+python-dotenv
+google-generativeai
+openpyxl
+xlrd
+numpy
+scikit-learn
